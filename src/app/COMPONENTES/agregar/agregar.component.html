@@ -1,0 +1,49 @@
+
+<!--este HTML es para agregar una sala de juntas nueva
+hacemos uso de dos formularios-->
+<div class="container">
+    <h1>AGREGAR SALA DE JUNTAS</h1>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <!--este formulario es para poner los datos de la junta nueva que queremos agregar-->
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Descripcion</label>
+                        <input [(ngModel)]="equipo.descripcion" type="text" class="form-control" name="descripcion">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Horario de Cita</label>
+                        <input [(ngModel)]="equipo.cita" type="text" class="form-control" name="cita">
+                    </div>
+                    <button (click)="agregar()" class="btn btn-primary"> Agregar</button>
+                </form>
+
+            </div>
+            <div class="col-sm-6">
+                <!--y con este formulario nos mostrara a un lado en tiempo real lo que estamos escribiendo en el formulario anterior-->
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">{{equipo.nombre}}</label>
+                       
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{equipo.descripcion}}</label>
+                       
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">{{equipo.cita}}</label>
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+
+</div>

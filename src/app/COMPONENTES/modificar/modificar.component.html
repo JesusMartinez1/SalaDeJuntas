@@ -1,0 +1,46 @@
+<div class="container">
+    <p>EDITAR SALA DE JUNTAS</p>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <!--el formulario para editar-->
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Descripcion</label>
+                        <input [(ngModel)]="equipo.descripcion" type="text" class="form-control" name="descripcion">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Horario de Cita</label>
+                        <input [(ngModel)]="equipo.cita" type="text" class="form-control" name="cita">
+                    </div>
+                    <button (click)="modificar()" class="btn btn-primary"> Guardar</button>
+                </form>
+
+            </div>
+             <!--se muestra lo que estamos escribiendo en editar-->
+            <div class="col-sm-6">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">{{equipo.nombre}}</label>
+                       
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{equipo.descripcion}}</label>
+                       
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">{{equipo.cita}}</label>
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+
+</div>

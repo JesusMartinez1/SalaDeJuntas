@@ -1,0 +1,40 @@
+
+
+
+<!-- Aqui es en donde mostramos en la pagina principal las salas de juntas que estan ya reservadas-->
+<div class="container">
+    <button routerLink="/add" type="button" class="btn btn-dark">Agregar</button>
+    <table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Horario de Cita</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--con el ngFor recorremos todo el arreglo de ListarEquipo y asi mostrar los datos-->
+          <tr *ngFor="let equipo of ListarEquipo">
+            
+            <td>{{equipo.nombre}}</td>
+            <td>{{equipo.descripcion}}</td>
+            <td>{{equipo.cita}}</td>
+            <td>{{equipo.hora}}</td>
+            <td>
+                <button (click)="modificar(equipo.id_equipo)" type="button" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminar(equipo.id_equipo)" type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+
+</div>
+
+
